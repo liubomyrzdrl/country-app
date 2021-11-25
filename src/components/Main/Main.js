@@ -1,5 +1,5 @@
 import React from "react";
-import { ChoosedCard } from "../choosedCard/ChoosedCard";
+import { ChosenCard } from "../chosenCard/ChosenCard";
 import { Countries } from "../countries/Countries";
 import { Header } from "../header/Header";
 import "./main.scss";
@@ -10,7 +10,7 @@ export const Main = () => {
       <Header />
       <div className="main__content">
         <Countries />
-        <ChoosedCard />
+        <ChosenCard />
       </div>
     </div>
   );
