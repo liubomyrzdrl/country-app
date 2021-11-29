@@ -1,6 +1,49 @@
 .countries {
-  width: 412px;
+  flex: 0 0 412px;
   margin-right: 3%;
-  overflow: auto;
+  &__block {
+    overflow: auto;
+    height: 100%;
+  }
+}
+.choose-card {
+  display: none;
+  align-items: center;
+  background: #e5e5e5;
+  margin-bottom: 3%;
+  margin-bottom: 10px;
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 18px;
+  }
+  &__img {
+    width: 110px;
+    height: 110px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
+@media (max-width: 996px) {
+  .choose-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 475px) {
+  .countries {
+    flex: 0 0 340px;
+  }
+}
+
+@media (max-width: 375px) {
+  .countries {
+    flex: 0 0 300px;
+  }
+}

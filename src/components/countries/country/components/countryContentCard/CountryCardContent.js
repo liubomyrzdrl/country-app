@@ -2,7 +2,7 @@ import React from "react";
 import "./countryCardContent.scss";
 import PropTypes from "prop-types";
 
-export const CountryCardContent = ({ name, capital, continent }) => {
+export const CountryCardContent = ({ name, capital, continent }) => {  
   return (
     <div className="country-card-content">
       <div className="country-card-content__country-block">
@@ -16,15 +16,25 @@ export const CountryCardContent = ({ name, capital, continent }) => {
       <div className="country-card-content__region-block">
         <div className="country-card-content__title">Region</div>
         <div className="country-card-content__continent">
-          {continent.name ? continent.name : ""}
+          {continent.name}
         </div>
       </div>
     </div>
   );
 };
 
+
 CountryCardContent.propTypes = {
   name: PropTypes.string,
   capital: PropTypes.string,
-  continent: PropTypes.object,
+  continent: PropTypes.shape({
+  name: PropTypes.string
+  }),
+};
+
+
+CountryCardContent.defaultProps = {
+    continent: {
+      name: ""
+    }
 };
