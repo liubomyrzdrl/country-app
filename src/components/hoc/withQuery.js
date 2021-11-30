@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 
-export const WithQueryCountries = (WrappedComponent, QUERY) => {
+export const WithQuery = (WrappedComponent, QUERY) => {
   const WithCountries = () => {
     const { loading, error, data } = useQuery(QUERY);
     if (loading) return <p>Loading...</p>;

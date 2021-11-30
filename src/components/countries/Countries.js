@@ -1,26 +1,56 @@
-import React from "react";
-import  { COUNTRIES__QUERY } from "../../graphql/queries/countries";
-import { WithQueryCountries } from "../hoc/withQueryCountries";
-
+import React  from "react";
+import { gql } from "@apollo/client";
+import { COUNTRY_FIELDS } from "./country/Country";
+import { WithQuery } from "../hoc/withQuery";
 import { Country } from "./country/Country";
+import { useIsMobile } from "../hooks/useIsMobile";
+import { SelectCard } from "../selectCard/SelectCard";
+import PropTypes from "prop-types";
 import "./countries.scss";
 
-export const Countries = WithQueryCountries(({ data }) => {
+export const COUNTRIES__QUERY = gql`
+  query getCountries {
+    countries {
+      ...Country
+    }
+  }
+  ${COUNTRY_FIELDS}
+`;
+
+export const Countries = WithQuery(({ data }) => {
+  const isMobile = useIsMobile();  
+  
   return (
     <div className="countries">
-      <>{!data && <div> The data about countries is not exist</div>}</>
-      <div className="countries__choose-card choose-card">
-        <div className="choose-card__img">
-          <img src="/smile2.png" alt="smile" />
-        </div>
-        <div className="choose-card__title">Choose a card :)</div>
-      </div>
+      <>{ !data && <div> The data about countries is not exist</div> }</>
+      <>{ isMobile && <SelectCard className="select-card" name="selectCardSmallIcon" /> }</>
       <div className="countries__block">
-        {Array.isArray(data.countries) &&
+        { Array.isArray(data.countries) &&
           data.countries.map((country) => (
             <Country {...country} key={country.code} />
-          ))}
+          )) }
       </div>
     </div>
   );
 }, COUNTRIES__QUERY);
+
+
+Countries.propTypes = {
+  data: PropTypes.shape({
+    code: PropTypes.string,
+    name: PropTypes.string,
+    capital: PropTypes.string,
+    continent: PropTypes.object,
+  })
+};
+
+Countries.defaultProps = {
+  data: {
+    code: "",
+    name: "",
+    capital: "",
+    continent: {
+      name: ""
+    },
+  }   
+};

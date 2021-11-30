@@ -1,9 +1,9 @@
 import React from "react";
 import { gql } from "@apollo/client";
 import PropTypes from "prop-types";
-import { CountryFlag } from "./components/countryFlag/CountryFlag";
 import { CountryCardContent } from "./components/countryContentCard/CountryCardContent";
 import "./country.scss";
+import { Flag } from "../../flag/Flag";
 
 export const COUNTRY_FIELDS = gql`
   fragment Country on Country {
@@ -16,11 +16,17 @@ export const COUNTRY_FIELDS = gql`
   }
 `;
 
+export function getFlagUrl(code) {
+  if (code && typeof code === "string") {
+    return `https://flagcdn.com/${code.toLowerCase()}.svg`;
+  }
+}
+
 export const Country = ({ code, name, capital, continent }) => {
   return (
     <div className="country">
       <div className="country__block">
-        <CountryFlag code={code} name={name} />
+        <Flag flagUrl={getFlagUrl(code)} width={"236"} height={"140"}  {...name} />
         <CountryCardContent
           name={name}
           capital={capital}
