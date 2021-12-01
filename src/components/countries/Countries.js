@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { gql } from "@apollo/client";
 import { COUNTRY_FIELDS } from "./country/Country";
 import { WithQuery } from "../hoc/withQuery";
@@ -18,30 +18,35 @@ export const COUNTRIES__QUERY = gql`
 `;
 
 export const Countries = WithQuery(({ data }) => {
-  const isMobile = useIsMobile();  
-  
+  const isMobile = useIsMobile();
+
   return (
     <div className="countries">
       <>{ !data && <div> The data about countries is not exist</div> }</>
-      <>{ isMobile && <SelectCard className="select-card" name="selectCardSmallIcon" /> }</>
+      <>
+        { isMobile &&  <SelectCard className="select-card" isMobile={isMobile} />} 
+      </>
       <div className="countries__block">
-        { Array.isArray(data.countries) &&
+        {Array.isArray(data.countries) &&
           data.countries.map((country) => (
             <Country {...country} key={country.code} />
-          )) }
+          ))}
       </div>
     </div>
   );
 }, COUNTRIES__QUERY);
 
-
 Countries.propTypes = {
   data: PropTypes.shape({
-    code: PropTypes.string,
-    name: PropTypes.string,
-    capital: PropTypes.string,
-    continent: PropTypes.object,
-  })
+    countries: PropTypes.arrayOf(
+      PropTypes.shape({
+        code: PropTypes.string,
+        name: PropTypes.string,
+        capital: PropTypes.string,
+        continent: PropTypes.object,
+      })
+    ),
+  }),
 };
 
 Countries.defaultProps = {
@@ -50,7 +55,7 @@ Countries.defaultProps = {
     name: "",
     capital: "",
     continent: {
-      name: ""
+      name: "",
     },
-  }   
+  },
 };

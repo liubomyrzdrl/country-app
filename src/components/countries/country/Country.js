@@ -16,17 +16,11 @@ export const COUNTRY_FIELDS = gql`
   }
 `;
 
-export function getFlagUrl(code) {
-  if (code && typeof code === "string") {
-    return `https://flagcdn.com/${code.toLowerCase()}.svg`;
-  }
-}
-
 export const Country = ({ code, name, capital, continent }) => {
   return (
     <div className="country">
       <div className="country__block">
-        <Flag flagUrl={getFlagUrl(code)} width={"236"} height={"140"}  {...name} />
+        <Flag code={code} width={"236"} height={"140"} name={name} />
         <CountryCardContent
           name={name}
           capital={capital}

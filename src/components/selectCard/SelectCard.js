@@ -1,18 +1,18 @@
 import React from "react";
-import Icon from "../Icon/Icon";
 import PropTypes from "prop-types";
+import { SelectCardIcon } from "../Icon/serviceIcon";
 import "./select-card.scss";
 
-export const SelectCard = ({ name, fontSizeTitle }) => {
+export const SelectCard = ({ isMobile }) => {
   return (
     <div className="select-card">
-      <Icon {...{ name }} />
-      <div
-        className="choose-card__title"
-        style={{ fontSize: `${fontSizeTitle}px` }}
-      >
-        Choose a card :)
-      </div>
+      {isMobile ? (
+        <SelectCardIcon width={133} height={133} />
+      ) : (
+        <SelectCardIcon width={266} height={266} />
+      )}
+
+      <div className="select-card__title">Choose a card :)</div>
     </div>
   );
 };
