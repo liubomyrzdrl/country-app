@@ -51,6 +51,6 @@ Countries.propTypes = {
 
 Countries.defaultProps = {
   data: {
-   countries: []
+    countries: [],
   },
 };

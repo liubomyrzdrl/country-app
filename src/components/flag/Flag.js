@@ -8,26 +8,20 @@ const getFlagUrl = (code) => {
   }
 };
 
-export const Flag = ({ code, name, width, height }) => (
-  <img
-    className="flag-img"
-    src={getFlagUrl(code)}
-    {...{ width }}
-    {...{ height }}
-    alt={name}
-  />
-);
+export const Flag = ({ code, name, size }) => {
+  return (
+    <img className={`flag-img ${size}`} src={getFlagUrl(code)} alt={name} />
+  );
+};
 
 Flag.propTypes = {
   name: PropTypes.string,
   code: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
+  size: PropTypes.string,
 };
 
 Flag.defaultProps = {
   name: "",
   code: "",
-  width: "",
-  height: "",
+  size: "",
 };

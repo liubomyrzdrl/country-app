@@ -1,20 +1,18 @@
 .flag-img {
   object-fit: cover;
-  img {
-    height: 100%;
-  }
 }
 
-@media (max-width: 475px) {
-  .flag-img {
-    width: 180px;
-    height: 108px;
-  }
+.large {
+  width: 236px;
+  height: 140px;
 }
 
-@media (max-width: 375px) {
-  .flag-img {
-    width: 150px;
-    height: 100px;
-  }
+.medium {
+  width: 180px;
+  height: 108px;
+}
+
+.small {
+  width: 150px;
+  height: 100px;
 }
