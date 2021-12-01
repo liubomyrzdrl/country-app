@@ -1,10 +1,10 @@
 import React from "react";
 
-export const SelectCardIcon = ({ width, height }) => {
+export const SelectCardIcon = ({ size }) => {
   return (
     <svg
-      width={width} 
-      height={height}
+      width={size} 
+      height={size}
       viewBox="0 0 133 133"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

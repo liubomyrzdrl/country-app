@@ -20,14 +20,14 @@ export const Flag = ({ code, name, width, height }) => (
 
 Flag.propTypes = {
   name: PropTypes.string,
-  flagUrl: PropTypes.string,
+  code: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
 };
 
 Flag.defaultProps = {
   name: "",
-  flagUrl: "",
+  code: "",
   width: "",
   height: "",
 };

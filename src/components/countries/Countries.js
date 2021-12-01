@@ -22,10 +22,10 @@ export const Countries = WithQuery(({ data }) => {
 
   return (
     <div className="countries">
-      <>{ !data && <div> The data about countries is not exist</div> }</>
-      <>
-        { isMobile &&  <SelectCard className="select-card" isMobile={isMobile} />} 
-      </>
+      {!data && <div> The data about countries is not exist</div>}
+
+      {isMobile && <SelectCard className="select-card" isMobile={isMobile} />}
+
       <div className="countries__block">
         {Array.isArray(data.countries) &&
           data.countries.map((country) => (
@@ -51,11 +51,6 @@ Countries.propTypes = {
 
 Countries.defaultProps = {
   data: {
-    code: "",
-    name: "",
-    capital: "",
-    continent: {
-      name: "",
-    },
+   countries: []
   },
 };
