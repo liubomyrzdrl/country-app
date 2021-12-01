@@ -15,13 +15,8 @@ export const SelectCard = ({ isMobile }) => {
 
 SelectCard.propTypes = {
   isMobile: PropTypes.bool,
-  name: PropTypes.string,
-  fontSizeTitle: PropTypes.string,
 };
 
 SelectCard.defaultProps = {
   isMobile: false,
-  name: "",
-  capital: "",
-  fontSizeTitle: "",
 };
