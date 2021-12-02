@@ -8,20 +8,24 @@ const getFlagUrl = (code) => {
   }
 };
 
-export const Flag = ({ code, name, size }) => {
+export const Flag = ({ code, name, isMobile }) => {
   return (
-    <img className={`flag-img ${size}`} src={getFlagUrl(code)} alt={name} />
+    <img
+      className={`flag-img flag-img${isMobile ? "_mobile" : "_desktop"}`}
+      src={getFlagUrl(code)}
+      alt={name}
+    />
   );
 };
 
 Flag.propTypes = {
   name: PropTypes.string,
   code: PropTypes.string,
-  size: PropTypes.string,
+  isMobile: PropTypes.bool,
 };
 
 Flag.defaultProps = {
   name: "",
   code: "",
-  size: "",
+  isMobile: false,
 };

@@ -26,9 +26,9 @@
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 411px) {
   .country-card-content {
-    height: 108px;
+    margin-left: 15px;
     &__name {
       font-size: 16px;
     }
@@ -37,11 +37,5 @@
     &__continent {
       font-size: 14px;
     }
-  }
-}
-
-@media (max-width: 375px) {
-  .country-card-content {
-    height: 100px;
   }
 }

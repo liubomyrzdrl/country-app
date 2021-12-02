@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { CountryCardContent } from "./components/countryContentCard/CountryCardContent";
 import "./country.scss";
 import { Flag } from "../../flag/Flag";
-import { useSizeFlag } from "../../hooks/useSizeFlag";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 export const COUNTRY_FIELDS = gql`
   fragment Country on Country {
@@ -18,10 +18,12 @@ export const COUNTRY_FIELDS = gql`
 `;
 
 export const Country = ({ code, name, capital, continent }) => {
+  const isMobile = useIsMobile();
+
   return (
     <div className="country">
       <div className="country__block">
-        <Flag code={code} size={useSizeFlag()} name={name} />
+        <Flag code={code} isMobile={isMobile} name={name} />
         <CountryCardContent
           name={name}
           capital={capital}
