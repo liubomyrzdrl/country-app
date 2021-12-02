@@ -1,0 +1,41 @@
+.country-card-content {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 140px;
+  margin-left: 22px;
+
+  &__title {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__name {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  &__continent,
+  &__capital {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 411px) {
+  .country-card-content {
+    margin-left: 15px;
+    &__name {
+      font-size: 16px;
+    }
+
+    &__capital,
+    &__continent {
+      font-size: 14px;
+    }
+  }
+}

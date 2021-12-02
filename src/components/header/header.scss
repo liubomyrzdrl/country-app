@@ -1,0 +1,12 @@
+.header {
+  background-color: #d6c28d;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 8px;
+  &__title {
+    font-weight: 300;
+    font-size: 32px;
+    font-style: normal;
+    line-height: 37px;
+  }
+}

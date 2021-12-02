@@ -1,0 +1,12 @@
+.flag-img {
+  object-fit: cover;
+  &_desktop {
+    width: 236px;
+    height: 140px;
+  }
+
+  &_mobile {
+    width: 180px;
+    height: 140px;
+  }
+}
