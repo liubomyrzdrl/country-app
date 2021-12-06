@@ -1,0 +1,204 @@
+.chosen-country {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &__block-content {
+    position: relative;
+  }
+  &__title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__content {
+    position: relative;
+    margin-left: 10px;
+    top: -7px;
+  }
+  &__capital-block,
+  &__сontinent-block,
+  &__population-block,
+  &__timezone-block,
+  &__сurrency-block,
+  &__call-codes-block {
+    display: flex;
+    align-items: center;
+    width: 250px;
+  }
+
+  &__сurrency-block,
+  &__call-codes-block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__capital-block {
+    position: relative;
+  }
+
+  &__name-block,
+  &__language-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__language-block {
+    position: relative;
+    top: -82px;
+  }
+
+  &__name,
+  &__language {
+    font-size: 44px;
+    font-weight: bold;
+  }
+  &__capital,
+  &__сontinent {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  &__сurrency,
+  &__call-codes {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  &__capital {
+    flex-wrap: wrap;
+    width: 185px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__capital-continent,
+  &__population-timezone,
+  &__currency-callcodes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__population-timezone {
+    position: relative;
+    width: 97%;
+    top: -57px;
+  }
+
+  &__currency-callcodes {
+    position: relative;
+    top: -50px;
+    width: 92%;
+  }
+
+  &__population-block {
+    justify-content: flex-end;
+  }
+  &__capital-continent {
+    width: 90%;
+    position: relative;
+    top: -41px;
+  }
+
+  &__call-codes {
+    display: flex;
+  }
+
+  &___title-population-block {
+    display: flex;
+  }
+  &__name-icons {
+    display: flex;
+  }
+}
+
+.content-population-country {
+  margin-right: 70px;
+}
+
+.content-timezone-country {
+  margin-left: 70px;
+}
+
+.content-courency-country-block {
+  justify-content: flex-end;
+}
+
+.content-call-codes-country {
+  margin-left: 30px;
+}
+
+.content-currency-country {
+  margin-right: 30px;
+}
+
+.ukr-right-bottom-icon {
+  position: relative;
+  top: 17px;
+}
+
+.ukr-left-bottom-icon {
+  position: relative;
+  top: 18px;
+}
+
+.capital-icon {
+  margin-left: 10px;
+}
+.continent-icon {
+  margin-right: 10px;
+}
+
+.population-top-icon {
+  position: relative;
+  right: 15px;
+}
+
+.population-center-icon {
+  position: relative;
+  right: 24px;
+}
+
+.time-zone-center-icon {
+  position: relative;
+  left: 24px;
+}
+
+.currency-icon {
+  position: relative;
+  top: -22px;
+}
+
+.call-codes-icon {
+  position: relative;
+  right: 3px;
+  top: -13px;
+}
+
+.languages-left-icon,
+.languages-right-icon {
+  position: relative;
+}
+
+.languages-left-icon {
+  top: -17px;
+}
+
+.languages-right-icon {
+  top: -5px;
+}
+
+.earth-smile_icon {
+  position: absolute;
+  transform: translate(50%);
+  left: 16%;
+}

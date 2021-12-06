@@ -1,0 +1,13 @@
+.greeting-country-mobile {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 29px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  &__greet-str {
+    position: relative;
+    top: -70px;
+  }
+}

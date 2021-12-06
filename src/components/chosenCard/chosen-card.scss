@@ -1,37 +1,61 @@
 .chosen-card {
-  flex: 0 1 770px;
+  flex: 0 1 768px;
   background-color: #f1f1f1;
   box-shadow: 0 4px 30px #808080;
   border-radius: 15px;
 
-  &__content {
-    margin-top: 50px;
-  }
-
   &__header {
     display: none;
     background-color: #d6c28d;
+    height: 58px;
     padding: 12px 0 8px;
   }
+
+  &__select-card {
+    margin-top: 109px;
+  }
+
   &__title {
+    position: absolute;
     text-align: center;
     font-weight: 300;
     font-size: 32px;
     font-style: normal;
     line-height: 37px;
+    transform: translate(50%);
+    right: 50%;
+  }
+
+  &__header-content {
+    display: flex;
+    align-items: center;
+    height: 37px;
+    width: 100%;
+  }
+  &__arrow-back-icon {
+    cursor: pointer;
+    margin-left: 30px;
   }
 }
 
 @media (max-width: 996px) {
   .chosen-card {
     position: absolute;
+    background-color: #fff;
     width: 100%;
-    height: 100vh;
+    height: 170vh;
     border-radius: 0;
     left: -100%;
     top: 0;
+    box-shadow: 0;
+    border-radius: 0;
     &__header {
-      display: block;
+      display: flex;
+      align-items: center;
     }
   }
+}
+
+.active-choosen-card {
+  left: 0;
 }

@@ -8,10 +8,12 @@ const getFlagUrl = (code) => {
   }
 };
 
-export const Flag = ({ code, name, isMobile }) => {
+export const Flag = ({ code, name, isMobile, isGreetingCountry }) => {
   return (
     <img
-      className={`flag-img flag-img${isMobile ? "_mobile" : "_desktop"}`}
+      className={`flag-img flag-img${
+        isMobile ? "_mobile" : "_desktop"
+      } flag-img${isGreetingCountry && "_greeting-country"}`}
       src={getFlagUrl(code)}
       alt={name}
     />

@@ -1,10 +1,22 @@
 .main {
-    max-width: 1080vw;
-    height: 100vh;
+  max-width: 1080vw;
+  &__select-card {
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    padding-bottom: 41px;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    margin: 53px 40px 58px 40px;
+    height: 855px;
+  }
+}
+
+@media (max-width: 996px) {
+  .main {
     &__content {
-      display: flex;
-      justify-content: center;
-      margin: 53px 40px 0 40px;
-      height: 75vh;
-    }    
+      height: 100%;
+    }
+  }
 }

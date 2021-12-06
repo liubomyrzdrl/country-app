@@ -1,0 +1,57 @@
+.chosen-country-mob {
+  &__block {
+    margin-left: 38px;
+  }
+
+  &__content {
+    margin-top: 27px;
+  }
+
+  &__fields {
+    display: flex;
+  }
+
+  &__icons {
+    margin-right: 24px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 4px;
+  }
+
+  &__data {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__languages {
+    display: flex;
+  }
+
+  &__lang {
+    margin-right: 3%;
+  }
+
+  &__languages:last-child() {
+    margin-right: 0;
+  }
+
+  &__lang {
+    background-color: #fbd3c0;
+    border-radius: 17px;
+    padding: 4px 7px;
+  }
+
+  &__call-call {
+    background: #a6e6fd;
+    border-radius: 15px;
+    text-align: center;
+  }
+}
+
+.country-mob-fields {
+  display: flex;
+}
