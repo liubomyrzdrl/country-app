@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export const UkraineLeftBottomIcon = () => (
   <svg
@@ -536,3 +537,23 @@ export const GreetingStringIcon = ({ width, height }) => (
     </defs>
   </svg>
 );
+
+GreetingStringIcon.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
+};
+
+RedCircleIcon.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
+};
+
+GreenCirlceIcon.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
+};
+
+EarthSmileIcon.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
+};

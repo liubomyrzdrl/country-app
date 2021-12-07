@@ -1,10 +1,10 @@
-import React from "react";
-import { gql } from "@apollo/client";
-import PropTypes from "prop-types";
-import { CountryCardContent } from "./components/countryContentCard/CountryCardContent";
-import "./country.scss";
-import { Flag } from "../../flag/Flag";
-import { useIsMobile } from "../../hooks/useIsMobile";
+import React from 'react';
+import { gql } from '@apollo/client';
+import PropTypes from 'prop-types';
+import { CountryCardContent } from './components/countryContentCard/CountryCardContent';
+import './country.scss';
+import { Flag } from '../../flag/Flag';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 export const COUNTRY_FIELDS = gql`
   fragment Country on Country {
@@ -17,7 +17,9 @@ export const COUNTRY_FIELDS = gql`
   }
 `;
 
-export const Country = ({ code, name, capital, continent }) => {
+export const Country = ({
+  code, name, capital, continent,
+}) => {
   const isMobile = useIsMobile();
 
   return (

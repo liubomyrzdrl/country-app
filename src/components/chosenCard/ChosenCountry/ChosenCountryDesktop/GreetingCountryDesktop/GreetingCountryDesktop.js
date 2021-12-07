@@ -1,8 +1,8 @@
-import React from "react";
-import { useParams } from "react-router";
-import { Flag } from "../../../../flag/Flag";
-import { GreetingStringIcon } from "../../ChosenCountryIcons";
-import "./greeting-country.scss";
+import React from 'react';
+import { useParams } from 'react-router';
+import { Flag } from '../../../../flag/Flag';
+import { GreetingStringIcon } from '../../ChosenCountryIcons';
+import './greeting-country.scss';
 
 export const GreetingCountryDesktop = () => {
   const { code } = useParams();
@@ -10,7 +10,7 @@ export const GreetingCountryDesktop = () => {
     <div className="greeting-country">
       <GreetingStringIcon width="788" height="188" />
       <div className="greeting-country__flag">
-        <Flag code={code} isGreetingCountry={true} />
+        <Flag code={code} isGreetingCountry />
       </div>
     </div>
   );

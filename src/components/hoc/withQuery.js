@@ -1,8 +1,9 @@
-import React from "react";
-import { useQuery } from "@apollo/client";
-import { useParams } from "react-router";
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router';
+import './hoc.scss';
 
-export const WithQuery = (WrappedComponent, QUERY, code) => {
+export const WithQuery = (WrappedComponent, QUERY) => {
   const WithCountries = () => {
     const { code } = useParams();
     const { loading, error, data } = useQuery(QUERY, {
@@ -10,8 +11,8 @@ export const WithQuery = (WrappedComponent, QUERY, code) => {
         code,
       },
     });
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
+    if (loading) return <p className="with-query-loading">Loading...</p>;
+    if (error) return <p lassName="with-query-error">Error :(</p>;
 
     return <WrappedComponent {...{ data }} />;
   };

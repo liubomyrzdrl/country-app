@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   GreenCirlceIcon,
   RedCircleIcon,
@@ -11,10 +12,9 @@ import {
   LanguagesLeftIcon,
   LanguagesRightIcon,
   EarthSmileIcon,
-} from "../ChosenCountryIcons";
-import PropTypes from "prop-types";
-import { GreetingCountryDesktop } from "./GreetingCountryDesktop/GreetingCountryDesktop";
-import "./chosen-country-desk.scss";
+} from '../ChosenCountryIcons';
+import { GreetingCountryDesktop } from './GreetingCountryDesktop/GreetingCountryDesktop';
+import './chosen-country-desk.scss';
 
 export const ChosenCountryDesktop = ({ data }) => (
   <div className="chosen-country">
@@ -39,7 +39,9 @@ export const ChosenCountryDesktop = ({ data }) => (
       <div className="chosen-country__capital-block">
         <div className="chosen-country__content">
           <div className="chosen-country__title">Capital</div>
-          <div className="chosen-country__capital"> {data.country.capital}</div>
+          <div className="chosen-country__capital">
+            {data.country.capital}
+          </div>
         </div>
         <div className="capital-icon">
           <GreenCirlceIcon width="40" height="40" />
@@ -106,7 +108,6 @@ export const ChosenCountryDesktop = ({ data }) => (
         <div className="chosen-country__content content-currency-country">
           <div className="chosen-country__title">Currency</div>
           <div className="chosen-country__сurrency">
-            {" "}
             {data.country.currency}
           </div>
         </div>
@@ -122,7 +123,6 @@ export const ChosenCountryDesktop = ({ data }) => (
         <div className="chosen-country__content content-call-codes-country">
           <div className="chosen-country__title">Calling codes</div>
           <div className="chosen-country__call-codes">
-            {" "}
             {data.country.phone}
           </div>
         </div>
@@ -143,7 +143,6 @@ export const ChosenCountryDesktop = ({ data }) => (
       </div>
       <div className="chosen-country__title">Official languages</div>
       <div className="chosen-country__language">
-        {" "}
         {data.country.languages.map((lang) => (
           <div key={lang.name}>{lang.name}</div>
         ))}
@@ -174,14 +173,14 @@ ChosenCountryDesktop.propTypes = {
 ChosenCountryDesktop.defaultProps = {
   data: {
     country: {
-      name: "",
+      name: '',
       continent: {
-        name: "",
+        name: '',
       },
-      currency: "",
-      phone: "",
+      currency: '',
+      phone: '',
       languages: [],
-      capital: "",
+      capital: '',
     },
   },
 };

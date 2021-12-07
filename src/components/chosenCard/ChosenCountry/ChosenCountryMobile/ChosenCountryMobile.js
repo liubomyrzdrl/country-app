@@ -1,20 +1,22 @@
-import React from "react";
-import { useParams } from "react-router";
-import { Flag } from "../../../flag/Flag";
-import { RedCircleIcon, GreenCirlceIcon } from "../ChosenCountryIcons";
-import { GreetingCountryMobile } from "./GreetingCountryMobile/GreetingCountryMobile";
-import { BottomCountryMobileIcon } from "./ChosenCountryMobileIcons";
-import PropTypes from "prop-types";
-import "./chosenCountryMobile.scss";
+import React from 'react';
+import { useParams } from 'react-router';
+import PropTypes from 'prop-types';
+import { Header } from '../../../header/Header';
+import { Flag } from '../../../flag/Flag';
+import { RedCircleIcon, GreenCirlceIcon } from '../ChosenCountryIcons';
+import { GreetingCountryMobile } from './GreetingCountryMobile/GreetingCountryMobile';
+import { BottomCountryMobileIcon } from './ChosenCountryMobileIcons';
+import './chosenCountryMobile.scss';
 
 export const ChosenCountryMobile = ({ data }) => {
   const { code } = useParams();
 
   return (
     <div className="chosen-country-mob">
+      <Header />
       <GreetingCountryMobile />
       <div className="chosen-country-mob__block">
-        <Flag code={code} isGreetingCountry={true} />
+        <Flag code={code} isGreetingCountry />
         <div className="chosen-country-mob__content">
           <div className="chosen-country-mob__fields">
             <div className="chosen-country-mob__icons">
@@ -27,7 +29,6 @@ export const ChosenCountryMobile = ({ data }) => {
             <div className="chosen-country-mob__country-content">
               <div className="chosen-country-mob__title">Country</div>
               <div className="chosen-country-mob__data">
-                {" "}
                 {data.country.name}
               </div>
             </div>
@@ -44,7 +45,6 @@ export const ChosenCountryMobile = ({ data }) => {
             <div className="chosen-country-mob__country-content">
               <div className="chosen-country-mob__title">Capital</div>
               <div className="chosen-country-mob__data">
-                {" "}
                 {data.country.capital}
               </div>
             </div>
@@ -61,7 +61,6 @@ export const ChosenCountryMobile = ({ data }) => {
             <div className="chosen-country-mob__country-content">
               <div className="chosen-country-mob__title">Continent</div>
               <div className="chosen-country-mob__data">
-                {" "}
                 {data.country.continent.name}
               </div>
             </div>
@@ -92,7 +91,6 @@ export const ChosenCountryMobile = ({ data }) => {
             <div className="chosen-country-mob__country-content">
               <div className="chosen-country-mob__title">Currency</div>
               <div className="chosen-country-mob__data">
-                {" "}
                 {data.country.currency}
               </div>
             </div>
@@ -113,7 +111,9 @@ export const ChosenCountryMobile = ({ data }) => {
                     className="chosen-country-mob__lang-block"
                     key={lang.name}
                   >
-                    <div className="chosen-country-mob__lang"> {lang.name}</div>
+                    <div className="chosen-country-mob__lang">
+                      {lang.name}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -130,7 +130,7 @@ export const ChosenCountryMobile = ({ data }) => {
 
             <div className="chosen-country-mob__country-content">
               <div className="chosen-country-mob__title">Time Zone</div>
-              <div className="chosen-country-mob__data">{"-"}</div>
+              <div className="chosen-country-mob__data">-</div>
             </div>
           </div>
           <div className="chosen-country-mob__fields">
@@ -141,7 +141,6 @@ export const ChosenCountryMobile = ({ data }) => {
             <div className="chosen-country-mob__country-content">
               <div className="chosen-country-mob__title">Calling Code</div>
               <div className="chosen-country-mob__data chosen-country-mob__call-call">
-                {" "}
                 {data.country.phone}
               </div>
             </div>
@@ -174,14 +173,14 @@ ChosenCountryMobile.propTypes = {
 ChosenCountryMobile.defaultProps = {
   data: {
     country: {
-      name: "",
+      name: '',
       continent: {
-        name: "",
+        name: '',
       },
-      currency: "",
-      phone: "",
+      currency: '',
+      phone: '',
       languages: [],
-      capital: "",
+      capital: '',
     },
   },
 };
