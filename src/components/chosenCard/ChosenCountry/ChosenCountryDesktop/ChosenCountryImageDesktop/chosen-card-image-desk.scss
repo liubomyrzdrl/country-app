@@ -1,0 +1,110 @@
+.chosen-country-img-desk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &__top,
+  &__center,
+  &__bottom {
+    display: flex;
+  }
+
+  &__center {
+    justify-content: space-between;
+    width: 160%;
+    position: relative;
+    top: -34px;
+    right: -1px;
+  }
+
+  &__bottom {
+    position: relative;
+    top: -59px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__time-zone {
+    position: relative;
+    left: 9px;
+  }
+}
+
+.ukr-center-icon {
+  top: -19px;
+}
+
+.ukr-center-icon,
+.top-left-green-icon,
+.top-right-green-icon,
+.bottom-left-green-icon,
+.bottom-right-green-icon,
+.bottom-lang-right-icon {
+  position: relative;
+}
+
+.top-left-green-icon {
+  top: -17px;
+  left: -41px;
+}
+
+.top-right-green-icon {
+  top: -29px;
+  right: -94px;
+}
+
+.time-zone-center-icon {
+  position: relative;
+  position: relative;
+  right: -22px;
+  top: -8px;
+}
+
+.time-zone-bottom-icon {
+  position: relative;
+  top: -10px;
+}
+
+.population-center-icon {
+  position: relative;
+  left: -19px;
+}
+
+.img-desk-content-pop-time {
+  width: 10%;
+}
+
+.earth-smile_icon {
+  position: absolute;
+  left: 50px;
+  top: -16px;
+}
+
+.bottom-left-green-icon {
+  left: -37px;
+}
+
+.bottom-right-green-icon {
+  right: -94px;
+  top: 8px;
+}
+
+.bottom-center-red-icon {
+  position: relative;
+  top: -12px;
+  top: 45px;
+}
+
+.bottom-lang-left-icon {
+  position: relative;
+  top: -11px;
+}
+
+.bottom-lang-right-icon {
+  top: -5px;
+  right: -6px;
+}

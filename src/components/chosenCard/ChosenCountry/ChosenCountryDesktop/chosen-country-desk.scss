@@ -1,204 +1,123 @@
 .chosen-country {
   display: flex;
-  position: relative;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  &__block-content {
-    position: relative;
+  position: relative;
+
+  &__center,
+  &__left,
+  &__capital,
+  &__сurrency,
+  &__сontinent {
+    display: flex;
   }
+
+  &__center {
+    justify-content: center;    
+  }
+
   &__title {
-    font-size: 14px;
-    line-height: 16px;
+    color: #a4a4a4;
+    font-size: 12px;
+    line-height: 14px;
   }
 
-  &__content {
-    position: relative;
-    margin-left: 10px;
-    top: -7px;
+  &__left { 
+    flex-direction: column;
+    right: 50px;
   }
-  &__capital-block,
-  &__сontinent-block,
-  &__population-block,
-  &__timezone-block,
-  &__сurrency-block,
-  &__call-codes-block {
-    display: flex;
-    align-items: center;
-    width: 250px;
-  }
-
-  &__сurrency-block,
-  &__call-codes-block {
-    display: flex;
-    align-items: center;
-  }
-
-  &__capital-block {
-    position: relative;
-  }
-
+  
   &__name-block,
+  &__capital-block,
+  &__population-block,
+  &__сontinent-block,
+  &__сurrency-block,
+  &__timezone-block,
+  &__call-codes-block,
   &__language-block {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-  }
-
-  &__language-block {
     position: relative;
-    top: -82px;
   }
 
-  &__name,
-  &__language {
-    font-size: 44px;
-    font-weight: bold;
+  &__name-block {
+    margin-bottom: 19px;
   }
-  &__capital,
-  &__сontinent {
-    font-weight: bold;
-    font-size: 40px;
+  
+   &__capital-block,
+   &__сontinent-block  {   
+    position: absolute;
+   }
+
+   &__center,
+   &__right,
+   &__left,
+   &__timezone-block,
+   &__call-codes-block,
+   &__language-block {
+    position: relative;
+   }
+
+  &__capital-block {     
+    right: 13px; 
   }
 
-  &__сurrency,
-  &__call-codes {
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 47px;
+  &__сontinent-block {
+    left: 42px;
+    top: 13px;
+  }
+
+  &__timezone-block {
+    top: 143px;
+    left: 117px;
+  }
+
+  &__call-codes-block {
+    top: 226px;
+    left: 63px;
   }
 
   &__capital {
-    flex-wrap: wrap;
-    width: 185px;
-    display: flex;
-    justify-content: center;
+    width: 100px;    
   }
 
-  &__content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  &__сurrency {
+    width: 100px;  
   }
 
-  &__capital-continent,
-  &__population-timezone,
-  &__currency-callcodes {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__population-timezone {
-    position: relative;
-    width: 97%;
-    top: -57px;
-  }
-
-  &__currency-callcodes {
-    position: relative;
-    top: -50px;
-    width: 92%;
+  &__сontinent {
+    width: 100px;   
+    margin-left: 20px;
   }
 
   &__population-block {
-    justify-content: flex-end;
-  }
-  &__capital-continent {
-    width: 90%;
-    position: relative;
-    top: -41px;
+    bottom: -139px;
+    left: -52px;
   }
 
-  &__call-codes {
-    display: flex;
+  &__сurrency-block {
+    bottom: -74px;
   }
 
-  &___title-population-block {
-    display: flex;
+  &__сurrency-block {
+    bottom: -222px;
+    left: 3px;
   }
-  &__name-icons {
-    display: flex;
+
+  &__language-block {
+    top: -61px;
   }
-}
 
-.content-population-country {
-  margin-right: 70px;
-}
-
-.content-timezone-country {
-  margin-left: 70px;
-}
-
-.content-courency-country-block {
-  justify-content: flex-end;
-}
-
-.content-call-codes-country {
-  margin-left: 30px;
-}
-
-.content-currency-country {
-  margin-right: 30px;
-}
-
-.ukr-right-bottom-icon {
-  position: relative;
-  top: 17px;
-}
-
-.ukr-left-bottom-icon {
-  position: relative;
-  top: 18px;
-}
-
-.capital-icon {
-  margin-left: 10px;
-}
-.continent-icon {
-  margin-right: 10px;
-}
-
-.population-top-icon {
-  position: relative;
-  right: 15px;
-}
-
-.population-center-icon {
-  position: relative;
-  right: 24px;
-}
-
-.time-zone-center-icon {
-  position: relative;
-  left: 24px;
-}
-
-.currency-icon {
-  position: relative;
-  top: -22px;
-}
-
-.call-codes-icon {
-  position: relative;
-  right: 3px;
-  top: -13px;
-}
-
-.languages-left-icon,
-.languages-right-icon {
-  position: relative;
-}
-
-.languages-left-icon {
-  top: -17px;
-}
-
-.languages-right-icon {
-  top: -5px;
-}
-
-.earth-smile_icon {
-  position: absolute;
-  transform: translate(50%);
-  left: 16%;
+  &__name,
+  &__capital,
+  &__сontinent,
+  &__сurrency,
+  &__call-codes,
+  &__language {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    color: #313131;
+  }
 }

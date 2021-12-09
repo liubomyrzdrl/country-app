@@ -4,9 +4,13 @@
   }
 
   &__content {
+    display: flex;
     margin-top: 27px;
   }
 
+  &__country-content {
+    margin-bottom: 22px;
+  }
   &__fields {
     display: flex;
   }

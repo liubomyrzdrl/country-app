@@ -8,6 +8,7 @@ import './main.scss';
 
 export const Main = () => {
   const isMobile = useIsMobile();
+
   return (
     <div className="main">
       <Header />
