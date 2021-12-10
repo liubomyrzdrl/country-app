@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowBackIcon } from '../chosenCard/chosenCarsIcons';
-import { useIsMobile } from '../hooks/useIsMobile';
+import { ArrowBackIcon } from './ArrowBackIcon';
+import { useIsMobile } from '../../hooks/useIsMobile';
 import './header.scss';
 
 export const Header = () => {

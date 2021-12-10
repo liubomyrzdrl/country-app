@@ -1,25 +1,17 @@
 import React from 'react';
-import { ChosenCard } from '../chosenCard/ChosenCard';
+import { Outlet } from 'react-router';
 import { Countries } from '../countries/Countries';
 import { Header } from '../header/Header';
-import { useIsMobile } from '../hooks/useIsMobile';
-import { SelectCard } from '../selectCard/SelectCard';
 import './main.scss';
 
-export const Main = () => {
-  const isMobile = useIsMobile();
-
+export const Main = ({isMobile}) => {
   return (
     <div className="main">
       <Header />
-      {isMobile && (
-        <div className="main__select-card">
-          <SelectCard isMobile={isMobile} />
-        </div>
-      )}
+      {isMobile && <Outlet />}
       <div className="main__content">
         <Countries />
-        <ChosenCard />
+        {!isMobile && <Outlet />}
       </div>
     </div>
   );

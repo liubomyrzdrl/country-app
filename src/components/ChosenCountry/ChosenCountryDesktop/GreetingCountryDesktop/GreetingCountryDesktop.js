@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import { Flag } from '../../../../flag/Flag';
+import { Flag } from '../../../flag/Flag';
 import { GreetingStringIcon } from '../../ChosenCountryIcons';
 import './greeting-country.scss';
 
