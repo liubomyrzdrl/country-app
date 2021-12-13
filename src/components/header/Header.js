@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowBackIcon } from '../chosenCard/chosenCarsIcons';
+import { ArrowBackIcon } from './Icons/ArrowBackIcon';
 import { useIsMobile } from '../hooks/useIsMobile';
 import './header.scss';
 
@@ -12,8 +12,6 @@ export const Header = () => {
 
   const handleBackToCard = () => {
     if (code) {
-      // const chosenCardNode = document.querySelector('.chosen-card');
-      // chosenCardNode.classList.remove('active-choosen-card');
       navigate('/');
     }
   };

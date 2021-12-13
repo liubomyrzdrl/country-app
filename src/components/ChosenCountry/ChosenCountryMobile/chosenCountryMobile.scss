@@ -2,21 +2,21 @@
   &__block {
     margin-left: 38px;
   }
-
-  &__content {
+   &__content {
     display: flex;
     margin-top: 27px;
   }
 
+  &__content-data {
+    margin-left: 24px;
+  } 
+
   &__country-content {
-    margin-bottom: 22px;
-  }
-  &__fields {
-    display: flex;
+    margin-bottom: 21px;
   }
 
-  &__icons {
-    margin-right: 24px;
+  &__fields {
+    display: flex;
   }
 
   &__title {
@@ -25,37 +25,19 @@
     margin-bottom: 4px;
   }
 
-  &__data {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-  }
-
   &__languages {
     display: flex;
-  }
-
-  &__lang {
-    margin-right: 3%;
-  }
-
-  &__languages:last-child() {
-    margin-right: 0;
   }
 
   &__lang {
     background-color: #fbd3c0;
     border-radius: 17px;
     padding: 4px 7px;
-  }
-
-  &__call-call {
-    background: #a6e6fd;
-    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
     text-align: center;
+    margin-right: 3%;
   }
 }
 
-.country-mob-fields {
-  display: flex;
-}

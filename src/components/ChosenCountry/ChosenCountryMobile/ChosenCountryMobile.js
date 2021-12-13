@@ -1,11 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
-import { Header } from '../../../header/Header';
-import { Flag } from '../../../flag/Flag';
+import { Header } from '../../Header/Header';
+import { Flag } from '../../Flag/Flag';
 import { GreetingCountryMobile } from './GreetingCountryMobile/GreetingCountryMobile';
 import './chosenCountryMobile.scss';
-import { ChosenCountryImageMobile } from './ChosenCountryImageMobile/ChosenCountryImageMobile';
+import { ChosenCountryIconMobile } from '../Icons/ChosenCountryIcons';
+import { CountryItem } from '../../CountryItem/CountryItem';
 
 export const ChosenCountryMobile = ({ data }) => {
   const { code } = useParams();
@@ -17,41 +18,43 @@ export const ChosenCountryMobile = ({ data }) => {
       <div className="chosen-country-mob__block">
         <Flag code={code} isGreetingCountry />
         <div className="chosen-country-mob__content">
-          <ChosenCountryImageMobile />
+          <ChosenCountryIconMobile />
           <div className="chosen-country-mob__content-data">
             <div className="chosen-country-mob__country-content">
-              <div className="chosen-country-mob__title">Country</div>
-              <div className="chosen-country-mob__data">
-                {data.country.name}
-              </div>
+              <CountryItem
+                title="Country"
+                value={data.country.name}
+                className="chosen-country-mob-item"
+              />
             </div>
-
             <div className="chosen-country-mob__country-content">
-              <div className="chosen-country-mob__title">Capital</div>
-              <div className="chosen-country-mob__data">
-                {data.country.capital}
-              </div>
+              <CountryItem
+                title="Capital"
+                value={data.country.capital}
+                className="chosen-country-mob-item"
+              />
             </div>
-
             <div className="chosen-country-mob__country-content">
-              <div className="chosen-country-mob__title">Continent</div>
-              <div className="chosen-country-mob__data">
-                {data.country.continent.name}
-              </div>
+              <CountryItem
+                title="Continent"
+                value={data.country.continent.name}
+                className="chosen-country-mob-item"
+              />
             </div>
-
             <div className="chosen-country-mob__country-content">
-              <div className="chosen-country-mob__title">Population</div>
-              <div className="chosen-country-mob__data">_</div>
+              <CountryItem
+                title="Population"
+                value="-"
+                className="chosen-country-mob-item"
+              />
             </div>
-
             <div className="chosen-country-mob__country-content">
-              <div className="chosen-country-mob__title">Currency</div>
-              <div className="chosen-country-mob__data">
-                {data.country.currency}
-              </div>
+              <CountryItem
+                title="Currency"
+                value={data.country.currency}
+                className="chosen-country-mob-item"
+              />
             </div>
-
             <div className="chosen-country-mob__country-content">
               <div className="chosen-country-mob__title">Languges</div>
               <div className="chosen-country-mob__languages chosen-country-mob__data">
@@ -69,22 +72,24 @@ export const ChosenCountryMobile = ({ data }) => {
             </div>
 
             <div className="chosen-country-mob__fields">
-
               <div className="chosen-country-mob__country-content">
-                <div className="chosen-country-mob__title">Time Zone</div>
-                <div className="chosen-country-mob__data">-</div>
+                <CountryItem
+                  title="Time Zone"
+                  value="-"
+                  className="chosen-country-mob-item"
+                />
               </div>
             </div>
             <div className="chosen-country-mob__fields">
 
               <div className="chosen-country-mob__country-content">
-                <div className="chosen-country-mob__title">Calling Code</div>
-                <div className="chosen-country-mob__data chosen-country-mob__call-call">
-                  {data.country.phone}
-                </div>
+                <CountryItem
+                  title="Calling Code"
+                  value="-"
+                  className="chosen-country-mob-item"
+                />
               </div>
             </div>
-
           </div>
         </div>
       </div>

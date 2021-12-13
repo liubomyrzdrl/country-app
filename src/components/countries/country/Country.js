@@ -1,9 +1,9 @@
 import React from 'react';
 import { gql } from '@apollo/client';
 import PropTypes from 'prop-types';
-import { CountryCardContent } from './components/countryContentCard/CountryCardContent';
+import { CountryCardContent } from './CountryContentCard/CountryCardContent';
 import './country.scss';
-import { Flag } from '../../flag/Flag';
+import { Flag } from '../../Flag/Flag';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
 export const COUNTRY_FIELDS = gql`
@@ -25,7 +25,7 @@ export const Country = ({
   return (
     <div className="country">
       <div className="country__block">
-        <Flag code={code} isMobile={isMobile} name={name} />
+        <Flag code={code} isMobile={isMobile} isGreetingCountry={false} name={name} />
         <CountryCardContent
           name={name}
           capital={capital}

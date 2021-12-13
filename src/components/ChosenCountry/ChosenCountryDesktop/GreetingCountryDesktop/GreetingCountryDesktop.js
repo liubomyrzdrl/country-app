@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import { Flag } from '../../../../flag/Flag';
-import { GreetingStringIcon } from '../../ChosenCountryIcons';
+import { Flag } from '../../../Flag/Flag';
+import { GreetingStringIcon } from '../../Icons/ChosenCountryIcons';
 import './greeting-country.scss';
 
 export const GreetingCountryDesktop = () => {

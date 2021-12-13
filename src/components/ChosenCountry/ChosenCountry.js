@@ -1,10 +1,10 @@
 import React from 'react';
 import { gql } from '@apollo/client';
 import PropTypes from 'prop-types';
-import { WithQuery } from '../../hoc/withQuery';
+import { WithQuery } from '../hoc/withQuery';
 import { ChosenCountryDesktop } from './ChosenCountryDesktop/ChosenCountryDesktop';
 import { ChosenCountryMobile } from './ChosenCountryMobile/ChosenCountryMobile';
-import { useIsMobile } from '../../hooks/useIsMobile';
+import { useIsMobile } from '../hooks/useIsMobile';
 
 const COUNTRY__QUERY = gql`
   query getCountry($code: ID!) {
@@ -21,8 +21,6 @@ const COUNTRY__QUERY = gql`
       languages {
         name
       }
-      emoji
-      emojiU
     }
   }
 `;
