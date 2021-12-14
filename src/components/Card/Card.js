@@ -8,6 +8,11 @@ export const Card = ({ children, className }) => (
   </div>
 );
 
+Card.defaultProps = {
+  children: '',
+  className: '',
+};
+
 Card.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,

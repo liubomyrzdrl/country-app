@@ -15,16 +15,22 @@ export const ChosenCountryDesktop = ({ data }) => (
         className="chosen-country-item"
       />
     </div>
+    <div className="chosen-country__capital-block">
+      <CountryItem
+        title="Capital"
+        value={data.country.capital}
+        className="chosen-country-item"
+      />
+    </div>
+    <div className="chosen-country__сontinent-block">
+      <CountryItem
+        title="Region"
+        value={data.country.continent.name}
+        className="chosen-country-item"
+      />
+    </div>
     <div className="chosen-country__center">
       <div className="chosen-country__left">
-        <div className="chosen-country__capital-block">
-          <CountryItem
-            title="Capital"
-            value={data.country.capital}
-            className="chosen-country-item"
-          />
-        </div>
-
         <div className="chosen-country__population-block">
           <CountryItem
             title="Population"
@@ -38,18 +44,14 @@ export const ChosenCountryDesktop = ({ data }) => (
             title="Currency"
             value={data.country.currency}
             className="chosen-country-item"
+            isOverflowCurrencyLength={
+              data.country.currency && data.country.currency.length > 10
+            }
           />
         </div>
       </div>
       <ChosenCountryDesktopIcon />
       <div className="chosen-country__right">
-        <div className="chosen-country__сontinent-block">
-          <CountryItem
-            title="Region"
-            value={data.country.continent.name}
-            className="chosen-country-item"
-          />
-        </div>
         <div className="chosen-country__timezone-block">
           <CountryItem
             title="Time Zone"
@@ -62,6 +64,9 @@ export const ChosenCountryDesktop = ({ data }) => (
             title="Calling codes"
             value={data.country.phone}
             className="chosen-country-item"
+            isOverflowCallCodeLength={
+              data.country.phone && data.country.phone.length > 14
+            }
           />
         </div>
       </div>
@@ -71,10 +76,13 @@ export const ChosenCountryDesktop = ({ data }) => (
       <CountryItem
         title="Official languages"
         value={data.country.languages.map((lang) => (
-          <div key={lang.name}>
+          <div key={lang.name} className="chosen-country__lang-items">
             {lang.name}
           </div>
         ))}
+        isOverflowLangLength={
+          data.country.languages && data.country.languages.length > 3
+        }
         className="chosen-country-item"
       />
     </div>

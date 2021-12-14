@@ -1,12 +1,12 @@
 .card {
-    flex: 0 1 768px;
-    background-color: #f1f1f1;
-    box-shadow: 0 4px 30px #808080;
-    border-radius: 15px;
-  }
+  flex: 0 1 768px;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 30px #808080;
+  border-radius: 15px;
+}
 
-  .card-mobile {
-    border-radius: 0;
-    height: 226px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-  }
+.card-mobile {
+  border-radius: 0;
+  height: 226px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}

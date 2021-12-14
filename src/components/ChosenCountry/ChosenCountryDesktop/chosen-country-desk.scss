@@ -5,23 +5,19 @@
 
   &__center,
   &__left,
-  &__capital,
-  &__сurrency,
-  &__сontinent {
+  &__capital {
     display: flex;
   }
 
   &__center,
   &__right,
-  &__left,
-  &__timezone-block,
-  &__call-codes-block,
-  &__language-block {
+  &__left {
     position: relative;
   }
 
   &__center {
     justify-content: center;
+    padding: 0 12px 0 12px;
   }
 
   &__left,
@@ -42,14 +38,9 @@
   &__timezone-block,
   &__call-codes-block,
   &__language-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
   }
 
-  &__сontinent-block,
   &__name-block,
   &__language-block {
     left: 18px;
@@ -69,35 +60,39 @@
   }
 
   &__capital-block {
-    right: -40px;
-    top: 28px;
+    display: flex;
+    justify-content: flex-end;
+    right: 594px;
+    top: 332px;
+    width: 200px;
   }
 
   &__сontinent-block {
-    left: -31px;
-    top: 29px;
-  }
-
-  &__timezone-block {
-    top: 143px;
+    left: 594px;
+    top: 336px;
   }
 
   &__call-codes-block {
     top: 226px;
-    left: -70px;
+    left: -104px;
+  }
+
+  &__timezone-block,
+  &__population-block {
+    bottom: -152px;
   }
 
   &__population-block {
-    bottom: -139px;
+    left: 49px;
+  }
+
+  &__timezone-block {
+    right: 49px;
   }
 
   &__сurrency-block {
-    bottom: -74px;
-  }
-
-  &__сurrency-block {
-    bottom: -224px;
-    left: 92px;
+    bottom: -230px;
+    left: 114px;
   }
 
   &__value {
