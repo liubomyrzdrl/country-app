@@ -8,7 +8,7 @@ export const Header = () => {
   const { code } = useParams();
   const isMobile = useIsMobile();
   const navigate = useNavigate();
-  const isShowArrowBackIcon = code && isMobile;
+  const isArrowBackIconVissible = code && isMobile;
 
   const handleBackToCard = () => {
     if (code) {
@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="header__content">
-        { isShowArrowBackIcon
+        { isArrowBackIconVissible
         && (
         <div
           className="header__arrow-back-icon"

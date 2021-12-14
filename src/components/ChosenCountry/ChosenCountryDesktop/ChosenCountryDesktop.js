@@ -70,7 +70,11 @@ export const ChosenCountryDesktop = ({ data }) => (
     <div className="chosen-country__language-block">
       <CountryItem
         title="Official languages"
-        value={data.country.languages}
+        value={data.country.languages.map((lang) => (
+          <div key={lang.name}>
+            {lang.name}
+          </div>
+        ))}
         className="chosen-country-item"
       />
     </div>

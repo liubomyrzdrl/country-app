@@ -99,4 +99,14 @@
     bottom: -224px;
     left: 92px;
   }
+
+  &__value {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // font-weight: bold;
+    // font-size: 40px;
+    // line-height: 40px;
+    // color: #313131;
+  }
 }

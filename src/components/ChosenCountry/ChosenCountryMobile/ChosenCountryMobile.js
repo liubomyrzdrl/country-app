@@ -56,9 +56,9 @@ export const ChosenCountryMobile = ({ data }) => {
               />
             </div>
             <div className="chosen-country-mob__country-content">
-              <div className="chosen-country-mob__title">Languges</div>
-              <div className="chosen-country-mob__languages chosen-country-mob__data">
-                {data.country.languages.map((lang) => (
+              <CountryItem
+                title="Official languages"
+                value={data.country.languages.map((lang) => (
                   <div
                     className="chosen-country-mob__lang-block"
                     key={lang.name}
@@ -68,7 +68,8 @@ export const ChosenCountryMobile = ({ data }) => {
                     </div>
                   </div>
                 ))}
-              </div>
+                className="chosen-country-mob-item"
+              />
             </div>
 
             <div className="chosen-country-mob__fields">
