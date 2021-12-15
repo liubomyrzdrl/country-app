@@ -26,10 +26,6 @@
     width: 200px;
   }
 
-  &__capital-block {
-    width: 100%;
-  }
-
   &__name-block,
   &__capital-block,
   &__population-block,
@@ -62,14 +58,15 @@
   &__capital-block {
     display: flex;
     justify-content: flex-end;
-    right: 594px;
-    top: 332px;
-    width: 200px;
+    right: -34px;
+    top: 25px;
   }
 
   &__сontinent-block {
-    left: 594px;
-    top: 336px;
+    right: 62px;
+    top: 22px;
+    display: flex;
+    width: 169px;
   }
 
   &__call-codes-block {

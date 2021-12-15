@@ -15,22 +15,16 @@ export const ChosenCountryDesktop = ({ data }) => (
         className="chosen-country-item"
       />
     </div>
-    <div className="chosen-country__capital-block">
-      <CountryItem
-        title="Capital"
-        value={data.country.capital}
-        className="chosen-country-item"
-      />
-    </div>
-    <div className="chosen-country__сontinent-block">
-      <CountryItem
-        title="Region"
-        value={data.country.continent.name}
-        className="chosen-country-item"
-      />
-    </div>
     <div className="chosen-country__center">
       <div className="chosen-country__left">
+        <div className="chosen-country__capital-block">
+          <CountryItem
+            title="Capital"
+            value={data.country.capital}
+            className="chosen-country-item"
+          />
+        </div>
+
         <div className="chosen-country__population-block">
           <CountryItem
             title="Population"
@@ -51,7 +45,15 @@ export const ChosenCountryDesktop = ({ data }) => (
         </div>
       </div>
       <ChosenCountryDesktopIcon />
+
       <div className="chosen-country__right">
+        <div className="chosen-country__сontinent-block">
+          <CountryItem
+            title="Region"
+            value={data.country.continent.name}
+            className="chosen-country-item"
+          />
+        </div>
         <div className="chosen-country__timezone-block">
           <CountryItem
             title="Time Zone"
