@@ -36,11 +36,8 @@ export const ChosenCountryDesktop = ({ data }) => (
         <div className="chosen-country__сurrency-block">
           <CountryItem
             title="Currency"
-            value={data.country.currency}
+            value={data.country.currency && data.country.currency.split(',')[0]}
             className="chosen-country-item"
-            isOverflowCurrencyLength={
-              data.country.currency && data.country.currency.length > 10
-            }
           />
         </div>
       </div>
@@ -64,11 +61,8 @@ export const ChosenCountryDesktop = ({ data }) => (
         <div className="chosen-country__call-codes-block">
           <CountryItem
             title="Calling codes"
-            value={data.country.phone}
+            value={data.country.phone && data.country.phone.split(',')[0]}
             className="chosen-country-item"
-            isOverflowCallCodeLength={
-              data.country.phone && data.country.phone.length > 14
-            }
           />
         </div>
       </div>
@@ -81,10 +75,7 @@ export const ChosenCountryDesktop = ({ data }) => (
           <div key={lang.name} className="chosen-country__lang-items">
             {lang.name}
           </div>
-        ))}
-        isOverflowLangLength={
-          data.country.languages && data.country.languages.length > 3
-        }
+        ))[0]}
         className="chosen-country-item"
       />
     </div>
