@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './country-item.scss';
+import classNames from 'classnames';
 
-export const CountryItem = ({ title, value, className }) => (
-  <div className={className}>
-    <span className={`${className}__title`}>{title}</span>
-    <div className={`${className}__value`}>{value}</div>
-  </div>
-);
+export const CountryItem = ({ title, value, className }) => {
+  const classNameMerged = classNames('country-item', className);
+
+  return (
+    <div className={classNameMerged}>
+      <span className="country-item__title">{title}</span>
+      <div className="country-item__value">{value}</div>
+    </div>
+  );
+};
 
 CountryItem.propTypes = {
   title: PropTypes.string,

@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 import PropTypes from 'prop-types';
 import { CountryCardContent } from './CountryContentCard/CountryCardContent';
 import './country.scss';
-import { Flag } from '../../Flag/Flag';
+import { Flag } from '../../flag/Flag';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
 export const COUNTRY_FIELDS = gql`

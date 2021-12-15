@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import { Countries } from '../Countries/Countries';
-import { Header } from '../Header/Header';
+import { Countries } from '../countries/Countries';
+import { Header } from '../header/Header';
 import { useIsMobile } from '../hooks/useIsMobile';
 import './main.scss';
 

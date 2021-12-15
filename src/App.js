@@ -4,7 +4,7 @@ import { Card } from './components/Card/Card';
 import { ChosenCountry } from './components/ChosenCountry/ChosenCountry';
 import { useIsMobile } from './components/hooks/useIsMobile';
 import { Main } from './components/Main/Main';
-import { SelectCard } from './components/SelectCard/SelectCard';
+import { SelectCard } from './components/selectCard/SelectCard';
 import './scss/style.scss';
 
 const App = () => {

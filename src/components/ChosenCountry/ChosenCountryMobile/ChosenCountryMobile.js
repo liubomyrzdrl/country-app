@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import PropTypes from 'prop-types';
-import { Header } from '../../Header/Header';
-import { Flag } from '../../Flag/Flag';
+import { Header } from '../../header/Header';
+import { Flag } from '../../flag/Flag';
 import { GreetingCountryMobile } from './GreetingCountryMobile/GreetingCountryMobile';
 import './chosenCountryMobile.scss';
 import { ChosenCountryIconMobile } from '../Icons/ChosenCountryIcons';
