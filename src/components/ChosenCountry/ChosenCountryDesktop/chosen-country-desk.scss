@@ -26,68 +26,68 @@
     width: 200px;
   }
 
-  &__name-block,
-  &__capital-block,
-  &__population-block,
-  &__сontinent-block,
-  &__сurrency-block,
-  &__timezone-block,
-  &__call-codes-block,
-  &__language-block {
+  &__name,
+  &__capital,
+  &__population,
+  &__continent,
+  &__currency,
+  &__timezone,
+  &__calling-codes,
+  &__language {
     position: relative;
   }
 
-  &__name-block,
-  &__language-block {
+  &__name,
+  &__language {
     left: 18px;
   }
 
-  &__name-block {
+  &__name {
     margin-bottom: 19px;
   }
 
-  &__capital-block,
-  &__сontinent-block {
+  &__capital,
+  &__continent {
     position: absolute;
   }
 
-  &__language-block {
+  &__language {
     top: 18px;
   }
 
-  &__capital-block {
+  &__capital {
     display: flex;
     justify-content: flex-end;
     right: -34px;
     top: 25px;
   }
 
-  &__сontinent-block {
+  &__continent {
     right: 62px;
     top: 22px;
     display: flex;
     width: 169px;
   }
 
-  &__call-codes-block {
+  &__calling-codes {
     top: 226px;
     left: -104px;
   }
 
-  &__timezone-block,
-  &__population-block {
+  &__timezone,
+  &__population {
     bottom: -152px;
   }
 
-  &__population-block {
+  &__population {
     left: 49px;
   }
 
-  &__timezone-block {
+  &__timezone {
     right: 49px;
   }
 
-  &__сurrency-block {
+  &__currency {
     bottom: -230px;
     left: 114px;
   }

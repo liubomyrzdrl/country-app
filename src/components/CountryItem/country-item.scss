@@ -1,38 +1,41 @@
-.chosen-country-item {
+.country-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   &__title {
     color: #a4a4a4;
     font-size: 12px;
     line-height: 14px;
   }
+
   &__value {
     text-align: center;
     font-weight: bold;
     font-size: 40px;
     line-height: 40px;
     color: #313131;
-  }
-}
 
-.chosen-country-mob-item {
-  &__title {
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 7px;
+    .country-item--overflow & {
+      max-width: 200px;
+      max-height: 100px;
+      overflow: auto;
+    } 
   }
-  &__value {
-    display: flex;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-  }
-}
 
-.value-overflow {
-  max-width: 200px;
-  max-height: 100px;
-  overflow: auto;
+  @media (max-width: 411px) {
+    &__title {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 7px;
+    }
+
+    &__value {
+      display: flex;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }  
 }
