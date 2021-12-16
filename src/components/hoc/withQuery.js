@@ -1,7 +1,8 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router';
-import './hoc.scss';
+import { Spinner } from '../Spinner/Spinner';
+import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
 export const WithQuery = (WrappedComponent, QUERY) => {
   const WithCountries = () => {
@@ -11,8 +12,8 @@ export const WithQuery = (WrappedComponent, QUERY) => {
         code,
       },
     });
-    if (loading) return <p className="with-query-loading">Loading...</p>;
-    if (error) return <p lassName="with-query-error">Error :(</p>;
+    if (loading) return <Spinner />;
+    if (error) return <ErrorMessage />;
 
     return <WrappedComponent {...{ data }} />;
   };
