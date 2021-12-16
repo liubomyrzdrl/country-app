@@ -22,6 +22,7 @@
     "plugins": ["react", "react-hooks"],
     "rules": {
       "no-unused-expressions": "off",
+      "linebreak-style": 0,
       "react/function-component-definition": [
         2,
         {
