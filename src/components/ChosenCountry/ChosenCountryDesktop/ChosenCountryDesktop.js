@@ -4,7 +4,7 @@ import { GreetingCountryDesktop } from './GreetingCountryDesktop/GreetingCountry
 import './chosen-country-desk.scss';
 import { CountryItem } from '../../CountryItem/CountryItem';
 import { ChosenCountryDesktopIcon } from '../Icons/ChosenCountryIcons';
-import { getFirstValue } from './GreetingCountryDesktop/utils';
+import { getFirstValue } from './utils';
 
 export const ChosenCountryDesktop = ({ data }) => (
   <div className="chosen-country">
