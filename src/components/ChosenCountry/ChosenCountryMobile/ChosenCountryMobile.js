@@ -7,6 +7,7 @@ import { GreetingCountryMobile } from './GreetingCountryMobile/GreetingCountryMo
 import './chosenCountryMobile.scss';
 import { ChosenCountryIconMobile } from '../Icons/ChosenCountryIcons';
 import { CountryItem } from '../../CountryItem/CountryItem';
+import { getFirstValue } from '../ChosenCountryDesktop/utils';
 
 export const ChosenCountryMobile = ({ data }) => {
   const { code } = useParams();
@@ -20,77 +21,38 @@ export const ChosenCountryMobile = ({ data }) => {
         <div className="chosen-country-mob__content">
           <ChosenCountryIconMobile />
           <div className="chosen-country-mob__content-data">
-            <div className="chosen-country-mob__country-content">
-              <CountryItem
-                title="Country"
-                value={data.country.name}
-                className="chosen-country-mob-item"
-              />
-            </div>
-            <div className="chosen-country-mob__country-content">
-              <CountryItem
-                title="Capital"
-                value={data.country.capital}
-                className="chosen-country-mob-item"
-              />
-            </div>
-            <div className="chosen-country-mob__country-content">
-              <CountryItem
-                title="Continent"
-                value={data.country.continent.name}
-                className="chosen-country-mob-item"
-              />
-            </div>
-            <div className="chosen-country-mob__country-content">
-              <CountryItem
-                title="Population"
-                value="-"
-                className="chosen-country-mob-item"
-              />
-            </div>
-            <div className="chosen-country-mob__country-content">
-              <CountryItem
-                title="Currency"
-                value={data.country.currency}
-                className="chosen-country-mob-item"
-              />
-            </div>
-            <div className="chosen-country-mob__country-content">
-              <CountryItem
-                title="Official languages"
-                value={data.country.languages.map((lang) => (
-                  <div
-                    className="chosen-country-mob__lang-block"
-                    key={lang.name}
-                  >
-                    <div className="chosen-country-mob__lang">
-                      {lang.name}
-                    </div>
-                  </div>
-                ))}
-                className="chosen-country-mob-item"
-              />
-            </div>
-
-            <div className="chosen-country-mob__fields">
-              <div className="chosen-country-mob__country-content">
-                <CountryItem
-                  title="Time Zone"
-                  value="-"
-                  className="chosen-country-mob-item"
-                />
-              </div>
-            </div>
-            <div className="chosen-country-mob__fields">
-
-              <div className="chosen-country-mob__country-content">
-                <CountryItem
-                  title="Calling Code"
-                  value="-"
-                  className="chosen-country-mob-item"
-                />
-              </div>
-            </div>
+            <CountryItem title="Country" value={data.country.name} />
+            <CountryItem title="Capital" value={data.country.capital} />
+            <CountryItem
+              title="Continent"
+              value={data.country.continent.name}
+            />
+            <CountryItem title="Population" value="-" />
+            <CountryItem
+              title="Currency"
+              value={(
+                <div className="chosen-country-mob__currency">
+                  {getFirstValue(data.country.currency)}
+                </div>
+              )}
+            />
+            <CountryItem
+              title="Official languages"
+              value={(
+                <div className="chosen-country-mob__lang">
+                  {getFirstValue(data.country.languages)}
+                </div>
+              )}
+            />
+            <CountryItem
+              title="Time Zone"
+              value="-"
+              className="chosen-country-mob-item"
+            />
+            <CountryItem
+              title="Calling Code"
+              value={getFirstValue(data.country.phone)}
+            />
           </div>
         </div>
       </div>

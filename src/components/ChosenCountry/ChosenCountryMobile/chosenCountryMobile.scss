@@ -2,42 +2,27 @@
   &__block {
     margin-left: 38px;
   }
-   &__content {
+  &__content {
     display: flex;
     margin-top: 27px;
   }
 
   &__content-data {
     margin-left: 24px;
-  } 
-
-  &__country-content {
-    margin-bottom: 22px;
   }
 
-  &__fields {
-    display: flex;
-  }
-
-  &__title {
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 4px;
-  }
-
-  &__languages {
-    display: flex;
+  &__lang,
+  &__currency {
+    border-radius: 17px;
+    padding: 4px 7px;
+    margin-right: 3%;
   }
 
   &__lang {
     background-color: #fbd3c0;
-    border-radius: 17px;
-    padding: 4px 7px;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    margin-right: 3%;
+  }
+
+  &__currency {
+    background-color: #ffe4a4;
   }
 }
-
