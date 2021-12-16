@@ -12,6 +12,7 @@ export const WithQuery = (WrappedComponent, QUERY) => {
         code,
       },
     });
+
     if (loading) return <Spinner />;
     if (error) return <ErrorMessage />;
 
