@@ -1,10 +1,17 @@
 .main {
-    max-width: 1080vw;
-    height: 100vh;
+  max-width: 1080vw;
+  &__content {
+    display: flex;
+    justify-content: center;
+    margin: 53px 40px 58px 40px;
+    height: 855px;
+  }
+}
+
+@media (max-width: 996px) {
+  .main {
     &__content {
-      display: flex;
-      justify-content: center;
-      margin: 53px 40px 0 40px;
-      height: 75vh;
-    }    
+      height: 100%;
+    }
+  }
 }
