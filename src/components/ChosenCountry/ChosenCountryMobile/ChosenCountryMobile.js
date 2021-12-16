@@ -7,10 +7,32 @@ import { GreetingCountryMobile } from './GreetingCountryMobile/GreetingCountryMo
 import './chosenCountryMobile.scss';
 import { ChosenCountryIconMobile } from '../Icons/ChosenCountryIcons';
 import { CountryItem } from '../../CountryItem/CountryItem';
-import { getFirstValue } from '../ChosenCountryDesktop/utils';
 
 export const ChosenCountryMobile = ({ data }) => {
   const { code } = useParams();
+
+  const getSprietedItems = (dataItem, classProps) => {
+    if (Array.isArray(dataItem)) {
+      return dataItem
+        .map((item, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <div className={`chosen-country-mob__${classProps}`} key={`${classProps}-${index}`}>
+            {item.name}
+          </div>
+        ));
+    }
+
+    if (dataItem.includes(',')) {
+      return dataItem.split(',')
+        .map((item, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+          <div className={`chosen-country-mob__${classProps}`} key={`${classProps}-${index}`}>
+            {item}
+          </div>
+        ));
+    }
+    return <div className={`chosen-country-mob__${classProps}`}>{dataItem}</div>;
+  };
 
   return (
     <div className="chosen-country-mob">
@@ -30,19 +52,11 @@ export const ChosenCountryMobile = ({ data }) => {
             <CountryItem title="Population" value="-" />
             <CountryItem
               title="Currency"
-              value={(
-                <div className="chosen-country-mob__currency">
-                  {getFirstValue(data.country.currency)}
-                </div>
-              )}
+              value={getSprietedItems(data.country.currency, 'currency')}
             />
             <CountryItem
               title="Official languages"
-              value={(
-                <div className="chosen-country-mob__lang">
-                  {getFirstValue(data.country.languages)}
-                </div>
-              )}
+              value={getSprietedItems(data.country.languages, 'lang')}
             />
             <CountryItem
               title="Time Zone"
@@ -51,7 +65,7 @@ export const ChosenCountryMobile = ({ data }) => {
             />
             <CountryItem
               title="Calling Code"
-              value={getFirstValue(data.country.phone)}
+              value={getSprietedItems(data.country.phone, 'call-code')}
             />
           </div>
         </div>

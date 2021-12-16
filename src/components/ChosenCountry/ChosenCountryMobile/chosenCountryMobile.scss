@@ -12,10 +12,15 @@
   }
 
   &__lang,
-  &__currency {
+  &__currency,
+  &__call-code {
     border-radius: 17px;
     padding: 4px 7px;
     margin-right: 3%;
+  }
+
+  &__mob-item-block {
+    display: flex;
   }
 
   &__lang {
@@ -25,4 +30,8 @@
   &__currency {
     background-color: #ffe4a4;
   }
+
+  &__call-code {
+    background-color:#a6e6fd;
+  } 
 }
