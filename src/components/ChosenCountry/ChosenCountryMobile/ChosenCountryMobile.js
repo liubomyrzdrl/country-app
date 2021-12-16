@@ -11,7 +11,7 @@ import { CountryItem } from '../../CountryItem/CountryItem';
 export const ChosenCountryMobile = ({ data }) => {
   const { code } = useParams();
 
-  const getSprietedItems = (dataItem, classProps) => {
+  const getAdaptedCountryItems = (dataItem, classProps) => {
     if (Array.isArray(dataItem)) {
       return dataItem
         .map((item, index) => (
@@ -52,11 +52,11 @@ export const ChosenCountryMobile = ({ data }) => {
             <CountryItem title="Population" value="-" />
             <CountryItem
               title="Currency"
-              value={getSprietedItems(data.country.currency, 'currency')}
+              value={getAdaptedCountryItems(data.country.currency, 'currency')}
             />
             <CountryItem
               title="Official languages"
-              value={getSprietedItems(data.country.languages, 'lang')}
+              value={getAdaptedCountryItems(data.country.languages, 'lang')}
             />
             <CountryItem
               title="Time Zone"
@@ -65,7 +65,7 @@ export const ChosenCountryMobile = ({ data }) => {
             />
             <CountryItem
               title="Calling Code"
-              value={getSprietedItems(data.country.phone, 'call-code')}
+              value={getAdaptedCountryItems(data.country.phone, 'call-code')}
             />
           </div>
         </div>
