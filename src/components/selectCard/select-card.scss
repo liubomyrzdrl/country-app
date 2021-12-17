@@ -1,11 +1,15 @@
 .select-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  transform: translate(50%);
+  right: 50%;
+  width: 100%;
+  text-align: center;
   &__title {
     font-size: 64px;
     line-height: 78px;
+  }
+  &__icon {
+    margin-top: 109px;
   }
 }
 

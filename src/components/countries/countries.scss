@@ -1,9 +1,9 @@
 .countries {
-  flex: 0 0 412px;
+  flex: 0 1 412px;
   margin-right: 3%;
   &__block {
-    overflow: auto;
     height: 100%;
+    overflow: auto;
   }
 }
 .choose-card {
@@ -28,15 +28,20 @@
 }
 
 @media (max-width: 996px) {
+  .countries {
+    flex: 0 0 412px;
+    margin-right: 3%;
+    margin-left: 24px;
+    &__block {
+      position: relative;
+      height: 606px;
+    }
+  }
   .choose-card {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-}
-
-.select-card {
-  margin-bottom: 40px;
 }
 
 @media (max-width: 475px) {
