@@ -17,13 +17,12 @@
 
   &__center {
     justify-content: center;
-    padding: 0 12px 0 12px;
   }
 
   &__left,
   &__right {
     flex-direction: column;
-    width: 200px;
+    width: 195px;
   }
 
   &__name,
@@ -35,11 +34,6 @@
   &__calling-codes,
   &__language {
     position: relative;
-  }
-
-  &__name,
-  &__language {
-    left: 18px;
   }
 
   &__name {
