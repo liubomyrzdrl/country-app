@@ -6,7 +6,8 @@ import { Card } from './Card';
 
 describe('Test Card', () => {
   it('should render Card component without error', () => {
-    render(<Card />);
+    const { container } = render(<Card />);
+    expect(container).toMatchSnapshot();
   });
 
   it('should render Card component element by class "card"', () => {

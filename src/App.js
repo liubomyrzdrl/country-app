@@ -1,8 +1,5 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
-import {
-  Routes, Route, useRoutes,
-} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Card } from './components/Card/Card';
 import { ChosenCountry } from './components/ChosenCountry/ChosenCountry';
 import { useIsMobile } from './components/hooks/useIsMobile';
