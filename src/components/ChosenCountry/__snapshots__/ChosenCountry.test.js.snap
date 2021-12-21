@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ChosenCountry component it should render desktop version ChosenCountry component 1`] = `
+<div>
+  <div
+    class="spinner"
+  />
+</div>
+`;
+
+exports[`Test ChosenCountry component it should render mobile version ChosenCountry component 1`] = `
+<div>
+  <div
+    class="spinner"
+  />
+</div>
+`;
+
+exports[`Test ChosenCountry component it should render mobile version ChosenCountryDesktop component 1`] = `
+<div>
+  <div
+    class="spinner"
+  />
+</div>
+`;
