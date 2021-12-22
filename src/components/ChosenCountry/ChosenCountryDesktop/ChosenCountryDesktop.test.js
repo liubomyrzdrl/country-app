@@ -6,7 +6,6 @@ import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ChosenCountryDesktop } from './ChosenCountryDesktop';
 
-const mocks = [];
 const mockData = {
   country: {
     capital: 'Andorra la Vella',
@@ -19,7 +18,7 @@ const mockData = {
 describe('Test ChosenCountryDesktop', () => {
   it('should render ChosenCountryDesktop element by class "chosen-country"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryDesktop data={mockData} />
         </Router>
@@ -30,7 +29,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryDesktop element by class "chosen-country__center"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryDesktop data={mockData} />
         </Router>
@@ -41,7 +40,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryDesktop element by class "chosen-country__left"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryDesktop data={mockData} />
         </Router>
@@ -52,7 +51,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryDesktop element by class "chosen-country__right"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryDesktop data={mockData} />
         </Router>
@@ -63,7 +62,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryDesktop element by class "chosen-country__name"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryDesktop data={mockData} />
         </Router>
@@ -74,7 +73,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryDesktop element by class "chosen-country__currency"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryDesktop data={mockData} />
         </Router>
@@ -85,7 +84,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryDesktop element by class "chosen-country__capital"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryDesktop data={mockData} />
         </Router>
@@ -96,7 +95,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryDesktop element by class "chosen-country__calling-codes"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryDesktop data={mockData} />
         </Router>

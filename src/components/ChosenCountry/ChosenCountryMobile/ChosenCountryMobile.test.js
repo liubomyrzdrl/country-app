@@ -6,13 +6,12 @@ import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ChosenCountryMobile } from './ChosenCountryMobile';
 
-const mocks = [];
 const mockData = {
   country: {
     capital: 'Andorra la Vella',
     code: 'AD',
     continent: { name: 'Europe', __typename: 'Continent' },
-    currency: 'EUR',
+    currency: 'EUR,UA,RUS',
     languages: [
       { name: 'Catalan' },
     ],
@@ -22,9 +21,20 @@ const mockData = {
 };
 
 describe('Test ChosenCountryDesktop', () => {
+  it('should render ChosenCountryMobile element by class "chosen-country-mob"', () => {
+    const { container } = render(
+      <MockedProvider>
+        <Router>
+          <ChosenCountryMobile data={mockData} />
+        </Router>
+      </MockedProvider>
+    );
+    expect(container.getElementsByClassName('chosen-country-mob')[0]).toBeInTheDocument();
+  });
+
   it('should render ChosenCountryMobile element by class "chosen-country-mob__block"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryMobile data={mockData} />
         </Router>
@@ -35,7 +45,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryMobile element by class "chosen-country-mob__content"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryMobile data={mockData} />
         </Router>
@@ -46,7 +56,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryMobile element by class "chosen-country-mob__content-data"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryMobile data={mockData} />
         </Router>
@@ -57,7 +67,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryMobile element by class "chosen-country-mob__name"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryMobile data={mockData} />
         </Router>
@@ -68,7 +78,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryMobile element by class "chosen-country-mob__currency"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryMobile data={mockData} />
         </Router>
@@ -79,7 +89,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryMobile element by class "chosen-country-mob__lang"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryMobile data={mockData} />
         </Router>
@@ -90,7 +100,7 @@ describe('Test ChosenCountryDesktop', () => {
 
   it('should render ChosenCountryMobile element by class "chosen-country-mob__call-code"', () => {
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <ChosenCountryMobile data={mockData} />
         </Router>

@@ -5,7 +5,6 @@ import { MockedProvider } from '@apollo/client/testing';
 import App from './App';
 import { useIsMobile } from './components/hooks/useIsMobile';
 
-const mocks = [];
 jest.mock('./components/hooks/useIsMobile', () => ({
   useIsMobile: jest.fn(),
 }));
@@ -14,7 +13,7 @@ describe('Test App', () => {
   test('it should render desktop version App component', () => {
     useIsMobile.mockImplementation(() => false);
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <App />
         </Router>
@@ -26,7 +25,7 @@ describe('Test App', () => {
   test('it should render mobile version App component', () => {
     useIsMobile.mockImplementation(() => true);
     const { container } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider>
         <Router>
           <App />
         </Router>
