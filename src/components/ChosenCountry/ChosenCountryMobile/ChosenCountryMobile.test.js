@@ -20,8 +20,8 @@ const mockData = {
   },
 };
 
-describe('Test ChosenCountryDesktop', () => {
-  it('should render ChosenCountryMobile element by class "chosen-country-mob"', () => {
+describe('Test ChosenCountryMobile component', () => {
+  it('should render ChosenCountryMobile element by class', () => {
     const { container } = render(
       <MockedProvider>
         <Router>
@@ -30,82 +30,11 @@ describe('Test ChosenCountryDesktop', () => {
       </MockedProvider>
     );
     expect(container.getElementsByClassName('chosen-country-mob')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryMobile element by class "chosen-country-mob__block"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryMobile data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country-mob__block')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryMobile element by class "chosen-country-mob__content"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryMobile data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country-mob__content')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryMobile element by class "chosen-country-mob__content-data"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryMobile data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country-mob__content-data')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryMobile element by class "chosen-country-mob__name"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryMobile data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country-mob__currency')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryMobile element by class "chosen-country-mob__currency"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryMobile data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
-    expect(container.getElementsByClassName('chosen-country-mob__currency')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryMobile element by class "chosen-country-mob__lang"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryMobile data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country-mob__lang')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryMobile element by class "chosen-country-mob__call-code"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryMobile data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country-mob__call-code')[0]).toBeInTheDocument();
   });
 });

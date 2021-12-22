@@ -55,6 +55,6 @@ describe('Test ChosenCountry component', () => {
     );
 
     await new Promise((resolve) => setTimeout(resolve, 0));
-    expect(container.getElementsByClassName('chosen-country-mob__block')[0]).toBeInTheDocument();
+    expect(container.getElementsByClassName('chosen-country-mob')[0]).toBeInTheDocument();
   });
 });

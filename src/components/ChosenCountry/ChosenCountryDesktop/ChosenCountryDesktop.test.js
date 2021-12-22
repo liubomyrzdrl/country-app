@@ -15,8 +15,8 @@ const mockData = {
   },
 };
 
-describe('Test ChosenCountryDesktop', () => {
-  it('should render ChosenCountryDesktop element by class "chosen-country"', () => {
+describe('Test ChosenCountryDesktop component', () => {
+  it('should render ChosenCountryDesktop element by class', () => {
     const { container } = render(
       <MockedProvider>
         <Router>
@@ -25,82 +25,12 @@ describe('Test ChosenCountryDesktop', () => {
       </MockedProvider>
     );
     expect(container.getElementsByClassName('chosen-country')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryDesktop element by class "chosen-country__center"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryDesktop data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country__center')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryDesktop element by class "chosen-country__left"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryDesktop data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country__right')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryDesktop element by class "chosen-country__right"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryDesktop data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country__right')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryDesktop element by class "chosen-country__name"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryDesktop data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country__name')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryDesktop element by class "chosen-country__currency"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryDesktop data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country__currency')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryDesktop element by class "chosen-country__capital"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryDesktop data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country__capital')[0]).toBeInTheDocument();
-  });
-
-  it('should render ChosenCountryDesktop element by class "chosen-country__calling-codes"', () => {
-    const { container } = render(
-      <MockedProvider>
-        <Router>
-          <ChosenCountryDesktop data={mockData} />
-        </Router>
-      </MockedProvider>
-    );
     expect(container.getElementsByClassName('chosen-country__calling-codes')[0]).toBeInTheDocument();
   });
 });
