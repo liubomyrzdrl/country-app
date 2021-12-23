@@ -10,7 +10,7 @@ describe('Test Flag component', () => {
     expect(screen.getByAltText('Ukraine')).toBeInTheDocument();
   });
 
-  it('should render Flag component by class flag-img & by props isMobile & props isGreetingCountry', () => {
+  it('should render mobile version with flag-img_greeting-country class', () => {
     const { container } = render(
       <Flag name="Ukraine" code="UA" isMobile isGreetingCountry />
     );

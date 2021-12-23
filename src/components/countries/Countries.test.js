@@ -69,7 +69,7 @@ describe('Test Countries component', () => {
     ).toBeInTheDocument();
   });
 
-  test('it should  Countries component to render 2 items', async () => {
+  test('it renders correct number of countries based on data passed', async () => {
     const { container } = render(
       <MockedProvider mocks={mockData}>
         <Router>
@@ -79,12 +79,10 @@ describe('Test Countries component', () => {
     );
 
     await new Promise((resolve) => setTimeout(resolve, 0));
-    expect(
-      container.getElementsByClassName('countries__block')[0].children.length
-    ).toEqual(2);
+    expect(container.getElementsByClassName('country').length).toEqual(2);
   });
 
-  test('it should not render Countries component content id data countries  is empty', async () => {
+  test(`it doesn't render countries when countries is empty array`, async () => {
     const { container } = render(
       <MockedProvider mocks={mockDataEmpty}>
         <Router>
@@ -97,5 +95,20 @@ describe('Test Countries component', () => {
     expect(
       container.getElementsByClassName('countries__block')[0]
     ).toBeEmptyDOMElement();
+  });
+
+  test('if the data about countries is not exist', async () => {
+    const { container } = render(
+      <MockedProvider mocks={mockDataEmpty}>
+        <Router>
+          <Countries />
+        </Router>
+      </MockedProvider>
+    );
+
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(
+      container.getElementsByClassName('country').length
+    ).toEqual(0);
   });
 });

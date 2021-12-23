@@ -18,17 +18,10 @@ describe('Test Country component', () => {
     expect(screen.getByAltText('Ukraine')).toBeInTheDocument();
   });
 
-  it('should render CountryCardContent items in Country component and  to be equal 3', () => {
-    const { container } = render(
-      <Country name="Ukraine" code="UA" continent={{ name: 'Europe' }} />
-    );
-
-    expect(
-      container.getElementsByClassName('country-card-content')[0]
-    ).toBeInTheDocument();
-    expect(
-      container.getElementsByClassName('country-card-content')[0].children
-        .length
-    ).toEqual(3);
+  it('should render Country component with props: "name, capital, continent"', () => {
+    render(<Country name="Ukraine" capital="Kiev" continent={{ name: 'Europe' }} />);
+    expect(screen.getByText('Ukraine')).toBeInTheDocument();
+    expect(screen.getByText('Kiev')).toBeInTheDocument();
+    expect(screen.getByText('Europe')).toBeInTheDocument();
   });
 });

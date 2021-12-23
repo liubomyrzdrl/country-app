@@ -5,7 +5,7 @@ import { ErrorMessage } from './ErrorMessage';
 describe('Test ErrorMessage component', () => {
   it('should render ErrorMessage component by class', () => {
     const { container } = render(
-      <ErrorMessage title="testTitle" value="testValue" />
+      <ErrorMessage />
     );
     expect(container.getElementsByClassName('error-msg')[0]).toBeInTheDocument();
   });
