@@ -6,7 +6,7 @@ import { ChosenCountryDesktop } from './ChosenCountryDesktop/ChosenCountryDeskto
 import { ChosenCountryMobile } from './ChosenCountryMobile/ChosenCountryMobile';
 import { useIsMobile } from '../hooks/useIsMobile';
 
-const COUNTRY__QUERY = gql`
+export const COUNTRY__QUERY = gql`
   query getCountry($code: ID!) {
     country(code: $code) {
       code
