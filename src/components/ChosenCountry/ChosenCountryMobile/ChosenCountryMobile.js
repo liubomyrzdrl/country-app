@@ -10,7 +10,6 @@ import { CountryItem } from '../../CountryItem/CountryItem';
 
 export const ChosenCountryMobile = ({ data }) => {
   const { code } = useParams();
-
   const getAdaptedCountryItems = (dataItem, classProps) => {
     if (Array.isArray(dataItem)) {
       return dataItem

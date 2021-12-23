@@ -21,8 +21,10 @@
   },
   "scripts": {
     "start": "CHOKIDAR_USEPOLLING=true react-scripts start",
+    "test:coverage": "react-scripts test --coverage",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache .",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,6 +44,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
