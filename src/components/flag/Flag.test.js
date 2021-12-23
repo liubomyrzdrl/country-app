@@ -18,4 +18,11 @@ describe('Test Flag component', () => {
     expect(container.getElementsByClassName('flag-img_mobile')[0]).toBeInTheDocument();
     expect(container.getElementsByClassName('flag-img_greeting-country')[0]).toBeInTheDocument();
   });
+
+  it('should render Flag component by class flag-img_desktop', () => {
+    const { container } = render(
+      <Flag />
+    );
+    expect(container.getElementsByClassName('flag-img_desktop')[0]).toBeInTheDocument();
+  });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { MockedProvider } from '@apollo/client/testing';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { CountryItem } from './CountryItem';
 
 describe('Test CountryItem component', () => {
@@ -11,9 +11,9 @@ describe('Test CountryItem component', () => {
       </MockedProvider>
 
     );
+    expect(screen.getByText('testTitle')).toBeInTheDocument();
+    expect(screen.getByText('testValue')).toBeInTheDocument();
     expect(container.getElementsByClassName('country-item')[0]).toBeInTheDocument();
-    expect(container.getElementsByClassName('country-item__title')[0]).toBeInTheDocument();
-    expect(container.getElementsByClassName('country-item__value')[0]).toBeInTheDocument();
     expect(container.getElementsByClassName('test-country-item')[0]).toBeInTheDocument();
   });
 });
