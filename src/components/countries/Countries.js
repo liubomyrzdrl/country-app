@@ -19,7 +19,6 @@ export const COUNTRIES__QUERY = gql`
 export const Countries = WithQuery(
   ({ data }) => (
     <div className="countries">
-      {!data && <div>The data about countries is not exist</div>}
       <div className="countries__block">
         {Array.isArray(data.countries)
           && data.countries.map((country, index) => (

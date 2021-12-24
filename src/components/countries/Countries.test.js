@@ -43,7 +43,7 @@ const mockDataEmpty = [
     },
     result: {
       data: {
-        countries: [],
+        countries: null,
       },
     },
   },
@@ -83,21 +83,6 @@ describe('Test Countries component', () => {
   });
 
   test(`it doesn't render countries when countries is empty array`, async () => {
-    const { container } = render(
-      <MockedProvider mocks={mockDataEmpty}>
-        <Router>
-          <Countries />
-        </Router>
-      </MockedProvider>
-    );
-
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    expect(
-      container.getElementsByClassName('countries__block')[0]
-    ).toBeEmptyDOMElement();
-  });
-
-  test('if the data about countries is not exist', async () => {
     const { container } = render(
       <MockedProvider mocks={mockDataEmpty}>
         <Router>
