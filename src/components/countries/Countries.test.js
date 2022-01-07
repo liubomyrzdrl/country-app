@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Countries, COUNTRIES__QUERY } from './Countries';
 
-const mockData = [
+export const mockData = [
   {
     request: {
       query: COUNTRIES__QUERY,

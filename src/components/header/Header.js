@@ -8,6 +8,7 @@ export const Header = () => {
   const { code } = useParams();
   const isMobile = useIsMobile();
   const navigate = useNavigate();
+
   const isArrowBackIconVissible = code && isMobile;
 
   const handleBackToCard = () => {
@@ -25,8 +26,8 @@ export const Header = () => {
           className="header__arrow-back-icon"
           onClick={handleBackToCard}
           onKeyDown={handleBackToCard}
-          role="button"
           tabIndex={0}
+          role="button"
         >
           <ArrowBackIcon />
         </div>
